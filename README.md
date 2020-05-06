@@ -6,7 +6,8 @@
 ## В процессе сделано:
  - Установлены minikube, kubectl, bash-completion
  - Проверена устойчивость к отказам.
- - Создано простое webapp, развернут образ с помощью Dockerfile и добавлено в DockerHub в репозиторий lasteris/flask-basic с тегом 0.1
+ - Создано простое webapp, развернут образ с помощью Dockerfile и добавлено в DockerHub в репозиторий
+ lasteris/web с тегом 1.0
  - Склонировано микросервис HipsterShop. Развернут образ с помощью существующего в нем же Dockerfile'а в репозиторий lasteris/frontend:1.0
  - создан файл конфигурации web-pod.yaml
  - сгенерирован файл конфигурации frontend-pod.yaml
@@ -28,7 +29,7 @@ storage-provisioner, в первую очередь, является аддон
 
 ## Как тестировал docker-образ:
  1.  docker run -it -p 8000:8000 lasteris/flask-basic:0.1
- 2. Перейти по ссылке http://127.0.0.1:8080/ и получить Hi!
+ 2. curl localhost:8080/ и получить html вывод
 
 ## Как запустить и протестировать pod:
  - kubectl apply -f web-pod.yaml

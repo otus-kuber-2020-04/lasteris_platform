@@ -7,13 +7,11 @@ metadata:
 spec:
   containers:
   - name: web
-    image: lasteris/flask-basic:0.1
+    image: lasteris/web:1.0
     resources:
       limits:
         memory: "256Mi"
         cpu: "500m"
-    ports:
-      - containerPort: 8000
   initContainers:
   - name: init
     image: busybox:1.31
