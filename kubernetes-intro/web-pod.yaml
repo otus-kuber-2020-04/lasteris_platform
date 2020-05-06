@@ -7,11 +7,14 @@ metadata:
 spec:
   containers:
   - name: web
-    image: lasteris/web:1.0
+    image: lasteris/web:1.0.2
     resources:
       limits:
         memory: "256Mi"
         cpu: "500m"
+    volumeMounts:
+      - name: app
+        mountPath: /app
   initContainers:
   - name: init
     image: busybox:1.31
